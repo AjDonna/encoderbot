@@ -23,7 +23,7 @@ async def not_subscribed(_, client, message):
 async def forces_sub(client, message):
     invite_link = await client.create_chat_invite_link(int(Config.AUTH_CHANNEL))
     buttons = [[InlineKeyboardButton(text="📢 Join Update Channel 📢", url=invite_link.invite_link) ]]
-    text = "**Sᴏʀʀy Yᴏᴜ'ʀᴇ Nᴏᴛ Jᴏɪɴᴇᴅ My Cʜᴀɴɴᴇʟ 😐. With My Permission Dont Use This Bot**"
+    text = "**Sᴏʀʀy Yᴏᴜ'ʀᴇ Nᴏᴛ Jᴏɪɴᴇᴅ My Cʜᴀɴɴᴇʟ 😐. Without My Permission Dont Use This Bot**"
 
     return await message.reply_text(text=text, reply_markup=InlineKeyboardMarkup(buttons))
           
